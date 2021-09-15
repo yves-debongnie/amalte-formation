@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,300;1,500&display=swap");
+
+:root {
+  --clr-neutral-900: #220c26;
+  --clr-neutral-100: #fefefe;
+  --clr-accent-900: #23b29f;
+
+  --ff-default: "Poppins", sans-serif;
+  --fs-base: 1rem;
+}
+
+@media (min-width: 40rem) {
+  :root {
+    --fs-base: 1.2rem;
+  }
+}
+
+/* Soft Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Document */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: var(--ff-default);
+  font-size: var(--fs-base);
+  line-height: 1.5;
+  color: var(--clr-neutral-900);
+}
+
+/* links */
+a {
+  color: currentColor;
+}
+
+/* media */
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: baseline;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Logo */
+.logo {
+  --logo-text: var(--clr-neutral-900);
+  --logo-accent: var(--clr-accent-900);
+}
+.logo--text {
+  fill: var(--logo-text);
+}
+.logo--accent {
+  fill: var(--logo-accent);
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  padding: 0.75em 1em;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: border-radius 300ms ease-in-out;
+}
+.button:hover {
+  border-radius: 0.25rem;
+}
+.button--primary {
+  background-color: var(--clr-neutral-900);
+  color: var(--clr-neutral-100);
+}
+.button--accent {
+  background-color: var(--clr-accent-900);
+  color: var(--clr-neutral-100);
+}
+
+/* Components */
+.hero-section {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: var(--clr-neutral-900);
+  background-image: url("/assets/img/hero-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--clr-neutral-100);
+}
+.hero-section__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90vw;
+  max-width: 720px;
+  margin: auto;
+  text-align: center;
+}
+.hero-section__title {
+  font-weight: 300;
+}
+
+.hero-section .logo {
+  --logo-text: var(--clr-neutral-100);
+  max-width: 400px;
+}
+
+/* Utils */
+.screen-reader {
+  /* Text meant only for screen readers. */
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
